@@ -77,11 +77,19 @@ function avancarA() {
     }
 
     if (posicaoAtualA === totalPontosA - 1) {
-      if (confirm("Tem certeza que deseja entrar na loucura?")) {
-        window.location.href = "loucura.html";
-      } else {
-        voltarA();
-      }
+
+      document.querySelector("#containerA > img").style.left = (novaPosicao + 7 ) + "px";
+
+      setTimeout(() => {
+
+        if (confirm("Tem certeza que deseja entrar na loucura?")) {
+          window.location.href = "loucura.html";
+        } else {
+          voltarA();
+        }
+    }, 1000);
+
+      
     }
   }
 }
