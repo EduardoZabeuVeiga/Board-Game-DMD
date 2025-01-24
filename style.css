@@ -1,0 +1,113 @@
+#area-letras {
+  padding-top: 0px;
+  padding-bottom: 100px; 
+  width: auto; 
+  height: auto; 
+}
+
+#carta {
+  width: 600px; 
+  height: 40px; 
+  position: relative; 
+}
+
+#carta img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+#containerA, #containerB, #containerC, #containerD  {
+  width: 600px; 
+  height: 20px; 
+  border: 0px solid black;
+  font-family: monospace; 
+  white-space: pre; 
+  position: relative;
+  margin-bottom: 10px; 
+  display: flex;    
+  align-items: center; 
+}
+
+#containerE, #containerF {
+
+  margin-left: 39px;
+  width: 600px; 
+  height: 20px; 
+  border: 0px solid black;
+  font-family: monospace; 
+  white-space: pre; 
+  position: relative;
+  margin-bottom: 10px;
+  top: -120px;
+  display: flex;    
+  align-items: center; 
+
+}
+
+#containerF {
+
+  top: -170px;
+
+
+}
+
+#containerA{
+
+  top: -15px;
+
+}
+
+#containerD{
+
+  top: 10px;
+
+}
+
+#containerB, #containerC, #containerD {
+  margin-left: 320px; 
+}
+
+#containerA img, #containerB img, #containerC img, #containerD img, #containerE img, #containerF img, #containerG img {
+  width: 50px; 
+  height: 70px;
+}
+
+#letraA, #letraB, #letraC, #letraD, #letraE, #letraF, #letraG {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: left 0.5s ease-in-out;
+}
+
+#botoess
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+#botoesA,#botoesB,#botoesC,#botoesD {
+
+  margin-left: 320px; 
+
+
+}
+
+#botoesE,#botoesF {
+
+  top: -100px
+
+}
+
+
+
