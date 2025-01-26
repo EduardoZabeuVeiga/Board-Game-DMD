@@ -219,3 +219,29 @@ function voltarG() {
     document.querySelector("#containerG > img").style.left = novaPosicao + "px";
   }
 }
+
+var imagens = [
+  "img/investigadores/A Garota.jpg",
+  "img/investigadores/ADAM.jpg",
+  "img/investigadores/AHMED.jpg",
+  "img/investigadores/Borden.jpg",
+  "img/investigadores/Elizabeth.jpg",
+  "img/investigadores/FATIMA.jpg",
+  "img/investigadores/IAN.jpg",
+  "img/investigadores/IRMaBETH.jpg",
+  "img/investigadores/Morgan.jpg",
+  "img/investigadores/RASPUTIN.jpg",
+  
+
+];
+var indiceInvest = 0;
+
+function avancarImagem() {
+  indiceInvest = (indiceInvest + 1) % imagens.length;
+  document.querySelector("#carta > img").src = imagens[indiceInvest];
+}
+
+function retornarImagem() {
+  indiceInvest = (indiceInvest - 1 + imagens.length) % imagens.length;
+  document.querySelector("#carta > img").src = imagens[indiceInvest];
+}
