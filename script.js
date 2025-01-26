@@ -245,3 +245,4 @@ function retornarImagem() {
   indiceInvest = (indiceInvest - 1 + imagens.length) % imagens.length;
   document.querySelector("#carta > img").src = imagens[indiceInvest];
 }
+
