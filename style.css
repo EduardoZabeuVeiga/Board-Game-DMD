@@ -34,7 +34,7 @@ body {
 }
 
 #containerA, #containerB, #containerC, #containerD  {
-  width: 600px; 
+  width: 900px; 
   height: 20px; 
   border: 0px solid black;
   font-family: monospace; 
@@ -48,7 +48,7 @@ body {
 #containerE, #containerF {
 
   margin-left: 39px;
-  width: 600px; 
+  width: 900px; 
   height: 20px; 
   border: 0px solid black;
   font-family: monospace; 
