@@ -18,7 +18,7 @@ body {
 }
 
 #carta {
-  width: 600px; 
+  width: 900px; 
   height: 40px; 
   position: relative; 
 }
@@ -63,7 +63,7 @@ body {
 
 #containerF {
 
-  top: -170px;
+  top: -150px;
 
 
 }
@@ -118,9 +118,43 @@ body {
 
 #botoesE,#botoesF {
 
-  top: -100px
+  
+
+ 
+}
+
+#area-letras {
+  position: relative; 
 
 }
+
+#botoesE button, #botoesF button {
+  position: absolute; 
+}
+
+/* Botões E */
+#botoesE .avancar {
+  top: 150px; /* Ajuste a posição vertical do botão "+" */
+  left: 450px; /* Ajuste a posição horizontal do botão "+" */
+}
+
+#botoesE .voltar {
+  top: 180px; /* Ajuste a posição vertical do botão "-" */
+  left: 400px; /* Ajuste a posição horizontal do botão "-" */
+}
+
+/* Botões F */
+#botoesF .avancar {
+  top: 260px; /* Ajuste a posição vertical do botão "+" */
+  left: 450px; /* Ajuste a posição horizontal do botão "+" */
+}
+
+#botoesF .voltar {
+  top: 290px; /* Ajuste a posição vertical do botão "-" */
+  left: 400px; /* Ajuste a posição horizontal do botão "-" */
+}
+
+
 
 
 
