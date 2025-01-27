@@ -16,11 +16,11 @@ var distanciaEntrePontosD = 115;
 
 var posicaoAtualE = 0;
 var totalPontosE = 5;
-var distanciaEntrePontosE = 34;
+var distanciaEntrePontosE = 58;
 
 var posicaoAtualF = 0;
-var totalPontosF = 5;
-var distanciaEntrePontosF = 34;
+var totalPontosF = 6;
+var distanciaEntrePontosF = 58;
 
 function exibirMensagem(mensagem) {
 
@@ -176,10 +176,22 @@ function voltarE() {
 }
 
 function avancarF() {
-  if (posicaoAtualF < totalPontosF - 1) {
+  if (posicaoAtualF  < totalPontosF - 1) {
     posicaoAtualF++;
     var novaPosicao = posicaoAtualF * distanciaEntrePontosF;
     document.querySelector("#containerF > img").style.left = novaPosicao + "px";
+
+  
+    if (posicaoAtualF === totalPontosF - 1) {
+    
+      setTimeout(function() {
+        if (confirm("Tem certeza que deseja entrar na morte?")) {
+          window.location.href = "morte.html";
+        } else {
+          voltarF();
+        }
+      }, 1000); 
+    }
   }
 }
 
@@ -188,35 +200,6 @@ function voltarF() {
     posicaoAtualF--;
     var novaPosicao = posicaoAtualF * distanciaEntrePontosF;
     document.querySelector("#containerF > img").style.left = novaPosicao + "px";
-  }
-  
-}
-
-function avancarG() {
-  if (posicaoAtualG < totalPontosG - 1) {
-    posicaoAtualG++;
-    var novaPosicao = posicaoAtualG * distanciaEntrePontosG;
-    document.querySelector("#containerG > img").style.left = novaPosicao + "px";
-
-  
-    if (posicaoAtualG === totalPontosG - 1) {
-    
-      setTimeout(function() {
-        if (confirm("Tem certeza que deseja entrar na morte?")) {
-          window.location.href = "morte.html";
-        } else {
-          voltarG();
-        }
-      }, 1000); 
-    }
-  }
-}
-
-function voltarG() {
-  if (posicaoAtualG > 0) {
-    posicaoAtualG--;
-    var novaPosicao = posicaoAtualG * distanciaEntrePontosG;
-    document.querySelector("#containerG > img").style.left = novaPosicao + "px";
   }
 }
 

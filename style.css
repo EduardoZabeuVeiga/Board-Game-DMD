@@ -34,7 +34,7 @@ body {
 }
 
 #containerA, #containerB, #containerC, #containerD  {
-  width: 900px; 
+  width: 1000px; 
   height: 20px; 
   border: 0px solid black;
   font-family: monospace; 
@@ -48,31 +48,38 @@ body {
 #containerE, #containerF {
 
   margin-left: 39px;
-  width: 900px; 
+  width: 1000px; 
   height: 20px; 
   border: 0px solid black;
   font-family: monospace; 
   white-space: pre; 
   position: relative;
   margin-bottom: 10px;
-  top: -120px;
+  margin-left: 60px;
+  top: 45px;
   display: flex;    
   align-items: center; 
+
 }
 
-#containerB, #containerC, #containerD {
-  margin-left: 530px; 
-  top: 45px;
-}
+
 
 #containerF {
 
-  top: -150px;
+  top: 35px;
+  
+  }
+
+
+#containerB, #containerC, #containerD {
+  margin-left: 530px; 
+  top: 55px;
 }
+
 
 #containerA{
 
-  top: -30px;
+  top: -20px;
 }
 
 #containerD{
@@ -85,14 +92,14 @@ body {
 
 #containerC {
 
-  top: 120px;
+  top: 130px;
 
 
 }
 
 #containerD {
 
-top: 190px;
+top: 200px;
 
 
 }
@@ -102,8 +109,8 @@ top: 190px;
  /*pino*/
 
 #containerA img, #containerB img, #containerC img, #containerD img, #containerE img, #containerF img, #containerG img {
-  width: 85px; 
-  height: 120px;
+  width: 80px; 
+  height: 105px;
 }
 
 #letraA, #letraB, #letraC, #letraD, #letraE, #letraF, #letraG {
