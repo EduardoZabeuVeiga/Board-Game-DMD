@@ -1,18 +1,18 @@
 var posicaoAtualA = 0;
 var totalPontosA = 21;
-var distanciaEntrePontosA = 25;
+var distanciaEntrePontosA = 42;
 
 var posicaoAtualB = 0;
 var totalPontosB = 4;
-var distanciaEntrePontosB = 70;
+var distanciaEntrePontosB = 115;
 
 var posicaoAtualC = 0;
 var totalPontosC = 4;
-var distanciaEntrePontosC = 70;
+var distanciaEntrePontosC = 115;
 
 var posicaoAtualD = 0;
 var totalPontosD = 4;
-var distanciaEntrePontosD = 70;
+var distanciaEntrePontosD = 115;
 
 var posicaoAtualE = 0;
 var totalPontosE = 5;
@@ -59,7 +59,7 @@ function exibirMensagem(mensagem) {
 function avancarA() {
   if (posicaoAtualA < totalPontosA - 1) {
     posicaoAtualA++;
-    var novaPosicao = ((posicaoAtualA -1) * distanciaEntrePontosA)+50;
+    var novaPosicao = ((posicaoAtualA -1) * distanciaEntrePontosA)+82;
     document.querySelector("#containerA > img").style.left = novaPosicao + "px";
 
     if (posicaoAtualA === 4) {
@@ -99,17 +99,17 @@ function voltarA() {
   if (posicaoAtualA > 0) {
     posicaoAtualA--;
     
-    var novaPosicao = ((posicaoAtualA -1) * distanciaEntrePontosA)+50;
+    var novaPosicao = ((posicaoAtualA -1) * distanciaEntrePontosA)+ 82;
     document.querySelector("#containerA > img").style.left = novaPosicao + "px";
   }
   else 
-    { document.querySelector("#containerA > img").style.left = 18 + "px";  
+    { document.querySelector("#containerA > img").style.left = 24 + "px";  
 
   }
 }
 
 
-document.querySelector("#containerA > img").style.left = 18 + "px";
+document.querySelector("#containerA > img").style.left = 24 + "px";
 
 function avancarB() {
   if (posicaoAtualB < totalPontosB - 1) {

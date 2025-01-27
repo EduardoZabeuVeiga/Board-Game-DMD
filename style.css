@@ -58,21 +58,21 @@ body {
   top: -120px;
   display: flex;    
   align-items: center; 
+}
 
+#containerB, #containerC, #containerD {
+  margin-left: 530px; 
+  top: 45px;
 }
 
 #containerF {
 
   top: -150px;
-
-
 }
 
 #containerA{
 
-  top: -15px;
-  
-
+  top: -30px;
 }
 
 #containerD{
@@ -81,13 +81,29 @@ body {
 
 }
 
-#containerB, #containerC, #containerD {
-  margin-left: 320px; 
+
+
+#containerC {
+
+  top: 120px;
+
+
 }
 
+#containerD {
+
+top: 190px;
+
+
+}
+
+
+
+ /*pino*/
+
 #containerA img, #containerB img, #containerC img, #containerD img, #containerE img, #containerF img, #containerG img {
-  width: 50px; 
-  height: 70px;
+  width: 85px; 
+  height: 120px;
 }
 
 #letraA, #letraB, #letraC, #letraD, #letraE, #letraF, #letraG {
