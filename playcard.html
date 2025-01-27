@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="playcard.css">
+</head>
+<body>
+
+  <h1></h1>
+    <div><button onclick="avancarImagem()">Avançar</button>
+      
+      <button onclick="retornarImagem()">Retornar</button>
+      <button onclick="window.location.href='index.html'">Inicio</button>
+    </div>
+    <br>
+      
+    <div id="carta"> 
+      <img src="img\investigadores\A Garota.jpg" alt="Investigador">
+      <div id="area-letras">
+
+        <div id="containerA">
+          
+          <img src="img/pino copiar.png" alt="Pino" id="letraA"> 
+          </div>
+          <br>
+          <br>
+        
+        <div id="botoesA" class="botoes_movimento">
+          <button class="avancar" onclick="avancarA()">+</button>
+          <button class="voltar" onclick="voltarA()">-</button>
+          </div>
+
+        <div id="containerB">
+          <img src="img/pino copiar.png" alt="Pino" id="letraB"> 
+        </div>
+        <br>
+        <br>
+        <div id="botoesB" class="botoes_movimento">
+          <button class="avancar" onclick="avancarB()">+</button>
+          <button class="voltar" onclick="voltarB()">-</button>
+        </div>
+
+        <div id="containerC">
+          <img src="img/pino copiar.png" alt="Pino" id="letraC"> 
+        </div>
+        <br>
+        <br>
+        <div id="botoesC" class="botoes_movimento">       
+          <button class="avancar" onclick="avancarC()">+</button>
+          <button class="voltar" onclick="voltarC()">-</button>
+          </div>
+        
+        <div id="containerD">
+          <img src="img/pino copiar.png" alt="Pino" id="letraD"> 
+        </div>
+        <br>
+        <br>
+        <div id="botoesD" class="botoes_movimento">
+          <button class="avancar" onclick="avancarD()">+</button>
+          <button class="voltar" onclick="voltarD()">-</button>
+          </div>
+
+   
+        <div id="containerE">
+          <img src="img/pino copiar.png" alt="Pino" id="letraE"> 
+          <button class="avancar" onclick="avancarE()">+</button>
+          <button class="voltar" onclick="voltarE()">-</button>
+        </div>
+        
+        <div id="containerF">
+          <button class="voltar" onclick="voltarF()">-</button>
+          <img src="img/pino copiar.png" alt="Pino" id="letraF">
+          <button class="avancar" onclick="avancarF()">+</button>
+        </div>
+
+      </div>
+    </div>
+
+  <script src="playcard.js"></script>
+</body>
+</html>
