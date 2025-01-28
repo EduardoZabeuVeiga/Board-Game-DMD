@@ -1,31 +1,80 @@
-// Dados dos anciões
 const anciões = [
-    { nome: "Ancião 1", imagem: "ancião1.jpg", historia: "História do Ancião 1..." },
-    { nome: "Ancião 2", imagem: "ancião2.jpg", historia: "História do Ancião 2..." },
-    { nome: "Ancião 3", imagem: "ancião3.jpg", historia: "História do Ancião 3..." },
-    { nome: "Ancião 4", imagem: "ancião4.jpg", historia: "História do Ancião 4..." },
-    { nome: "Ancião 5", imagem: "ancião5.jpg", historia: "História do Ancião 5..." },
-    { nome: "Ancião 6", imagem: "ancião6.jpg", historia: "História do Ancião 6..." },
-    { nome: "Ancião 7", imagem: "ancião7.jpg", historia: "História do Ancião 7..." },
-    { nome: "Ancião 8", imagem: "ancião8.jpg", historia: "História do Ancião 8..." },
-    { nome: "Ancião 9", imagem: "ancião9.jpg", historia: "História do Ancião 9..." },
-    { nome: "Ancião 10", imagem: "ancião10.jpg", historia: "História do Ancião 10..." }
-    // Adicione mais anciões aqui
+    { 
+        nome: "Ancião 1", 
+        imagem:  "img/ancioes/azathoth.jpg",
+        historia: "História do Ancião 1: Este é o primeiro ancião, um ser de poder inimaginável...",
+        alt: "Imagem do Ancião 1 - Um ser de poder inimaginável" 
+    },
+    { 
+        nome: "Ancião 2", 
+        imagem: "img/ancioes/BLACK GOAT (2).jpg", 
+        historia: "História do Ancião 2: Nascido nas profundezas do cosmos, este ancião...",
+        alt: "Imagem do Ancião 2 - Nascido nas profundezas do cosmos" 
+    },
+    { 
+        nome: "Ancião 3", 
+        imagem: "img/ancioes/CTHULHU.jpg", 
+        historia: "História do Ancião 3: Guardião de segredos ancestrais, este ancião...",
+        alt: "Imagem do Ancião 3 - Guardião de segredos ancestrais" 
+    },
+    { 
+        nome: "Ancião 4", 
+        imagem: "ancião4.jpg", 
+        historia: "História do Ancião 4: Conhecido por sua sabedoria e conhecimento...",
+        alt: "Imagem do Ancião 4 - Conhecido por sua sabedoria e conhecimento" 
+    },
+    { 
+        nome: "Ancião 5", 
+        imagem: "ancião5.jpg", 
+        historia: "História do Ancião 5: Dominador dos elementos, este ancião...",
+        alt: "Imagem do Ancião 5 - Dominador dos elementos" 
+    },
+    { 
+        nome: "Ancião 6", 
+        imagem: "ancião6.jpg", 
+        historia: "História do Ancião 6: Criador de mundos e realidades, este ancião...",
+        alt: "Imagem do Ancião 6 - Criador de mundos e realidades" 
+    },
+    { 
+        nome: "Ancião 7", 
+        imagem: "ancião7.jpg", 
+        historia: "História do Ancião 7: Um ser misterioso com poderes sobrenaturais...",
+        alt: "Imagem do Ancião 7 - Um ser misterioso com poderes sobrenaturais" 
+    },
+    { 
+        nome: "Ancião 8", 
+        imagem: "ancião8.jpg", 
+        historia: "História do Ancião 8: O guardião do tempo e do espaço, este ancião...",
+        alt: "Imagem do Ancião 8 - O guardião do tempo e do espaço" 
+    },
+    { 
+        nome: "Ancião 9", 
+        imagem: "ancião9.jpg", 
+        historia: "História do Ancião 9: Comanda legiões de criaturas das trevas...",
+        alt: "Imagem do Ancião 9 - Comanda legiões de criaturas das trevas" 
+    },
+    { 
+        nome: "Ancião 10", 
+        imagem: "ancião10.jpg", 
+        historia: "História do Ancião 10: O último ancião, cujo poder é desconhecido...",
+        alt: "Imagem do Ancião 10 - O último ancião, cujo poder é desconhecido" 
+    }
 ];
 
-const listaAncioes = document.getElementById("lista-ancioes");
+const selectAncião = document.getElementById("select-ancião-ancioes");
 const imagemAncião = document.getElementById("ancião-imagem");
 const historiaAncião = document.getElementById("ancião-historia");
-const botaoVoltar = document.getElementById("botao-voltar");
-const botaoAvancar = document.getElementById("botao-avançar");
+const botaoVoltar = document.getElementById("botao-voltar-ancioes");
+const botaoAvancar = document.getElementById("botao-avancar-ancioes");
 
 let anciãoAtual = 0;
 
 function exibirAncião(index) {
     const ancião = anciões[index];
     imagemAncião.src = ancião.imagem;
-    imagemAncião.alt = `Imagem do ${ancião.nome}`;
+    imagemAncião.alt = ancião.alt;
     historiaAncião.textContent = ancião.historia;
+    selectAncião.value = index;
 }
 
 function proximoAncião() {
@@ -41,14 +90,9 @@ function anciãoAnterior() {
 botaoVoltar.addEventListener("click", anciãoAnterior);
 botaoAvancar.addEventListener("click", proximoAncião);
 
-anciões.forEach((ancião, index) => {
-    const linkAnciao = document.createElement("a");
-    linkAnciao.textContent = ancião.nome;
-    linkAnciao.addEventListener("click", () => {
-        anciãoAtual = index;
-        exibirAncião(anciãoAtual);
-    });
-    listaAncioes.appendChild(linkAnciao);
+selectAncião.addEventListener("change", (event) => {
+    anciãoAtual = parseInt(event.target.value);
+    exibirAncião(anciãoAtual);
 });
 
 exibirAncião(anciãoAtual);

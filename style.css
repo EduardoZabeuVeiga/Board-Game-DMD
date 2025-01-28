@@ -1,8 +1,9 @@
+/* Estilos gerais da página */
 body {
-    background-image: url("./img/httpssteamusercontentaakamaihdnetugc1012692322314105313955A2B415101ACB6FEA3D1CAB25A639B82B25495.jpg"); /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
     font-family: sans-serif;
     margin: 0;
+    background-image: url("./img/httpssteamusercontentaakamaihdnetugc1012692322314105313955A2B415101ACB6FEA3D1CAB25A639B82B25495.jpg"); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
 }
 
 header {
@@ -12,7 +13,6 @@ header {
     text-align: center;
     width: 100%; 
     z-index: 100; 
-
 }
 
 nav ul {
@@ -46,22 +46,50 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
-
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
-#anciões {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}.ancião {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 300px;
+
+/* Estilos para o contêiner do select e botões */
+#personagem-select-ancioes {
     text-align: center;
-}.ancião img {
-    max-width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilos para o select */
+#select-ancião-ancioes {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+/* Estilos para os botões */
+#botao-voltar-ancioes, #botao-avancar-ancioes {
+    padding: 5px 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Estilos para o contêiner da imagem e história */
+#personagem-info-ancioes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilos para a imagem */
+#ancião-imagem {
+    max-width: 300px;
     height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos para a história */
+#ancião-historia {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    max-width: 500px;
 }
