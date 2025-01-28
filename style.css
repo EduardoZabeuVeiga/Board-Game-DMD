@@ -1,4 +1,66 @@
-/* Estilos gerais da página */
+/* banners */
+
+banner {
+    color: rgb(12, 0, 0);          /* Cor do texto branca */
+    -webkit-text-stroke: 1px rgb(255, 72, 0); /* Contorno amarelo de 1px */
+    font-size: 20px;
+    text-shadow: 
+    -1px -1px 0 #000, 
+     1px  1px 0 #fff; 
+     transform: skewX(15deg); /* Inclina o banner no eixo X */
+
+}
+
+#anciaobanner {
+
+    background-image: url(img/chthulhu19.png);
+    background-size: 150px;
+    background-repeat: no-repeat;
+
+}
+
+#jogarbanner {
+
+    background-image: url(img/borden.png);
+    background-size: 100px;
+    background-position: 22px 30px; 
+    background-repeat: no-repeat;
+    background-color: rgba(22, 70, 85, 0.8); 
+
+}
+
+#investigadoresbanner {
+
+    background-image: url(img/hasputin.png);
+    background-size: 100px;
+    background-position: 22px 30px; 
+    background-repeat: no-repeat;
+    background-color: rgba(22, 70, 85, 0.8); 
+
+
+}
+
+
+
+nav a {
+    color: rgb(236, 230, 230);
+    text-decoration: none;
+}.campo-redondo {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(85, 22, 22, 0.8); 
+    border: 3px solid red; /* Borda vermelha */
+    margin: 20px;
+    text-align: center;
+    line-height: 150px; 
+    cursor: pointer; 
+}
+
+/* banners */
+
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -31,21 +93,7 @@ nav li {
     margin: 0 1em;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-}.campo-redondo {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.8); 
-    border: 3px solid red; /* Borda vermelha */
-    margin: 20px;
-    text-align: center;
-    line-height: 150px; 
-    cursor: pointer; 
-}
+
 
 footer {
     background-color: rgba(0, 0, 0, 0.5);
