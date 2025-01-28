@@ -21,9 +21,9 @@ banner {
 
 #jogarbanner {
 
-    background-image: url(img/borden.png);
-    background-size: 100px;
-    background-position: 22px 30px; 
+    background-image: url(img/Camada\ 28.png);
+    background-size: 150px;
+    background-position: -20px 30px; 
     background-repeat: no-repeat;
     background-color: rgba(22, 70, 85, 0.8); 
 
@@ -31,9 +31,9 @@ banner {
 
 #investigadoresbanner {
 
-    background-image: url(img/hasputin.png);
-    background-size: 100px;
-    background-position: 22px 30px; 
+    background-image: url(img/Camada\ 29.png);
+    background-size: 125px;
+    background-position: 15px 30px; 
     background-repeat: no-repeat;
     background-color: rgba(22, 70, 85, 0.8); 
 
