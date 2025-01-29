@@ -159,12 +159,23 @@ footer {
     z-index: 10; 
   }
 
-  #laststand {
+  #aangtxt {
 
     font-size: x-large;
-    color: #fff;
+    color: #fcfcf9;
+  
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black; 
+    opacity: 0.8; 
     margin-left: 50px;  
     margin-right: 20px;
 
   }
 
+  #aang {
+    background-image: url("img/toph.jpg"); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Ajuste a imagem para cobrir toda a página */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+  }
