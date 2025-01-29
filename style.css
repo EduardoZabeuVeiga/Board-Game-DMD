@@ -161,9 +161,10 @@ footer {
 
   #laststand {
 
-    font-size: large;
+    font-size: x-large;
     color: #fff;
-
-
+    margin-left: 50px;  
+    margin-right: 20px;
 
   }
+
