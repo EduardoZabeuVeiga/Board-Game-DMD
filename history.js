@@ -38,7 +38,49 @@ const historias = [
     { 
         imagem: "img/investigadores/BACK/RASPUTIN back.jpg", 
         alt: "RASPUTIN" 
+    },
+
+    { 
+        imagem: "IMG/investigadores/BACK/ADILAH VIDAL.jpg", 
+        alt: "ADILAH VIDAL" 
+    },
+    { 
+        imagem: "img/investigadores/BACK/ALEX PARKER.jpg", 
+        alt: "ALEX PARKER" 
+    },
+    { 
+        imagem: "img/investigadores/BACK/ARIELE VENTURI.jpg", 
+        alt: "ARIELE VENTURI" 
+    },
+    { 
+        imagem: "img/investigadores/BACK/HAILIA HOVATH.jpg", 
+        alt: "HAILIA HOVATH" 
+    },
+    { 
+        imagem: "img/investigadores/BACK/MARGARETHE RICHTER.jpg", 
+        alt: "MARGARETHE RICHTER" 
+    },
+    { 
+        imagem: "img/investigadores/BACK/MARIO.jpg", 
+        alt: "MARIO" 
+    },
+    { 
+        imagem: "img/investigadores/BACK/MARY DIAZ.jpg", 
+        alt: "MARY DIAZ" 
+    },
+    { 
+        imagem: "img/investigadores/BACK/PADRE LUKE.jpg", 
+        alt: "PADRE LUKE" 
+    },
+    { 
+        imagem: "img/investigadores/BACK/SAM WOOD.jpg", 
+        alt: "SAM WOOD" 
+    },
+    { 
+        imagem: "img/investigadores/BACK/TONY BOYLE.jpg", 
+        alt: "TONY BOYLE" 
     }
+
 ];
 
 const selectHistoria = document.getElementById("select-historia");
