@@ -214,6 +214,18 @@ var imagens = [
   "img/investigadores/IRMaBETH.jpg",
   "img/investigadores/Morgan.jpg",
   "img/investigadores/RASPUTIN.jpg",
+//s2
+  "img/investigadores/ARIELE.jpg",
+  "img/investigadores/HAILIA.jpg",
+  "img/investigadores/ADILAH.jpg",
+  "img/investigadores/ALEX.jpg",
+  "img/investigadores/MARY.jpg",
+  "img/investigadores/SAM.jpg",
+  "img/investigadores/TONY.jpg",
+  "img/investigadores/LUKE.jpg",
+  "img/investigadores/MARGARETHE.jpg",
+  "img/investigadores/MARIO.jpg"
+
   
 
 ];
