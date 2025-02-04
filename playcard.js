@@ -224,7 +224,7 @@ var imagens = [
   "img/investigadores/TONY.jpg",
   "img/investigadores/LUKE.jpg",
   "img/investigadores/MARGARETHE.jpg",
-  "img/investigadores/MARIO.jpg"
+  "img/investigadores/MARIO.jpg",
 
   
 

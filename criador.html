@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Troca de Imagens</title>
+  <style>
+
+    img {
+      width: 200px;
+      height: 150px;
+      margin: 10px;
+    }
+
+  .botoes {
+      display: flex;  
+      flex-direction: row; 
+      gap: 10px;
+    }
+
+
+    #img1 { 
+      width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 198px;
+    left: 0px;
+    }
+#img2 {
+  width: 563px;
+    height: 252px;
+    position: absolute;
+    top: 106px;
+    left: 437px;
+}
+#img3 {
+  width: 562px;
+    height: 161px;
+    position: absolute;
+    top: 358px;
+    left: 438px;
+}
+#img4 {
+  width: 562px;
+    height: 188px;
+    position: absolute;
+    top: 518px;
+    left: 438px;
+}
+
+
+
+#grade {
+
+  border: 2px solid black;
+  width: 1000px;
+  height: 600px;
+  position: absolute;
+  z-index: -1;
+}
+
+  #grade img {
+    width: 1000px;
+    height: 600px;
+    margin-left: 0px;
+    margin-top: 47px;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <h2>Troca de Imagens</h2>
+
+  <div id="grade">
+
+    <img src="img/investigadores/ALEX.jpg" alt="">
+
+</div>
+  
+  
+
+  <div class="botoes">
+    <button onclick="randomizarImagens()">Randomizar Imagens</button>
+    <div>
+
+
+  
+
+
+      <label for="imagem1">Imagem 1:</label>
+      <select id="imagem1" onchange="trocarImagem(this, 'img1')">
+        <option value="img/investigadores/AHMED.jpg">AHMED.jpg</option>
+        <option value="img/investigadores/ALEX.jpg">ALEX.jpg</option>
+        <option value="img/investigadores/ARIELE.jpg">ARIELE.jpg</option>
+        <option value="img/investigadores/Borden.jpg">Borden.jpg</option>
+        <option value="img/investigadores/Elizabeth.jpg">Elizabeth.jpg</option>
+        <option value="img/investigadores/FATIMA.jpg">FATIMA.jpg</option>
+        <option value="img/investigadores/HAILIA.jpg">HAILIA.jpg</option>
+        <option value="img/investigadores/IAN.jpg">IAN.jpg</option>
+        <option value="img/investigadores/IRMABETH.jpg">IRMABETH.jpg</option>
+        <option value="img/investigadores/LUKE.jpg">LUKE.jpg</option>
+        <option value="img/investigadores/MARGARETHE.jpg">MARGARETHE.jpg</option>
+        <option value="img/investigadores/MARIO.jpg">MARIO.jpg</option>
+        <option value="img/investigadores/MARY.jpg">MARY.jpg</option>
+        <option value="img/investigadores/Morgan.jpg">Morgan.jpg</option>
+        <option value="img/investigadores/RASPUTIN.jpg">RASPUTIN.jpg</option>
+        
+      </select>
+    </div>
+
+    <div>
+      <label for="imagem2">Imagem 2:</label>
+      <select id="imagem2" onchange="trocarImagem(this, 'img2')">
+        <option value="img\CRIADOR IMG\hab1.png">habil.jpg</option>
+        <option value="img/investigadores/ALEX.jpg">ALEX.jpg</option>
+        <option value="img/investigadores/ARIELE.jpg">ARIELE.jpg</option>
+        <option value="img/investigadores/Borden.jpg">Borden.jpg</option>
+        <option value="img/investigadores/Elizabeth.jpg">Elizabeth.jpg</option>
+        <option value="img/investigadores/FATIMA.jpg">FATIMA.jpg</option>
+        <option value="img/investigadores/HAILIA.jpg">HAILIA.jpg</option>
+        <option value="img/investigadores/IAN.jpg">IAN.jpg</option>
+        <option value="img/investigadores/IRMABETH.jpg">IRMABETH.jpg</option>
+        <option value="img/investigadores/LUKE.jpg">LUKE.jpg</option>
+        <option value="img/investigadores/MARGARETHE.jpg">MARGARETHE.jpg</option>
+        <option value="img/investigadores/MARIO.jpg">MARIO.jpg</option>
+        <option value="img/investigadores/MARY.jpg">MARY.jpg</option>
+        <option value="img/investigadores/Morgan.jpg">Morgan.jpg</option>
+        <option value="img/investigadores/RASPUTIN.jpg">RASPUTIN.jpg</option>
+        <option value="img/investigadores/SAM.jpg">SAM.jpg</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="imagem3">Imagem 3:</label>
+      <select id="imagem3" onchange="trocarImagem(this, 'img3')">
+        <option value="img\CRIADOR IMG\hab2.png">hab1.jpg</option>
+        <option value="img/investigadores/ALEX.jpg">ALEX.jpg</option>
+        <option value="img/investigadores/ARIELE.jpg">ARIELE.jpg</option>
+        <option value="img/investigadores/Borden.jpg">Borden.jpg</option>
+        <option value="img/investigadores/Elizabeth.jpg">Elizabeth.jpg</option>
+        <option value="img/investigadores/FATIMA.jpg">FATIMA.jpg</option>
+        <option value="img/investigadores/HAILIA.jpg">HAILIA.jpg</option>
+        <option value="img/investigadores/IAN.jpg">IAN.jpg</option>
+        <option value="img/investigadores/IRMABETH.jpg">IRMABETH.jpg</option>
+        <option value="img/investigadores/LUKE.jpg">LUKE.jpg</option>
+        <option value="img/investigadores/MARGARETHE.jpg">MARGARETHE.jpg</option>
+        <option value="img/investigadores/MARIO.jpg">MARIO.jpg</option>
+        <option value="img/investigadores/MARY.jpg">MARY.jpg</option>
+        <option value="img/investigadores/Morgan.jpg">Morgan.jpg</option>
+        <option value="img/investigadores/RASPUTIN.jpg">RASPUTIN.jpg</option>
+        <option value="img/investigadores/SAM.jpg">SAM.jpg</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="imagem4">Imagem 4:</label>
+      <select id="imagem4" onchange="trocarImagem(this, 'img4')">
+        <option value="img/investigadores/AHMED.jpg">AHMED.jpg</option>
+        <option value="img/investigadores/ALEX.jpg">ALEX.jpg</option>
+        <option value="img/investigadores/ARIELE.jpg">ARIELE.jpg</option>
+        <option value="img/investigadores/Borden.jpg">Borden.jpg</option>
+        <option value="img/investigadores/Elizabeth.jpg">Elizabeth.jpg</option>
+        <option value="img/investigadores/FATIMA.jpg">FATIMA.jpg</option>
+        <option value="img/investigadores/HAILIA.jpg">HAILIA.jpg</option>
+        <option value="img/investigadores/IAN.jpg">IAN.jpg</option>
+        <option value="img/investigadores/IRMABETH.jpg">IRMABETH.jpg</option>
+        <option value="img/investigadores/LUKE.jpg">LUKE.jpg</option>
+        <option value="img/investigadores/MARGARETHE.jpg">MARGARETHE.jpg</option>
+        <option value="img/investigadores/MARIO.jpg">MARIO.jpg</option>
+        <option value="img/investigadores/MARY.jpg">MARY.jpg</option>
+        <option value="img/investigadores/Morgan.jpg">Morgan.jpg</option>
+        <option value="img/investigadores/RASPUTIN.jpg">RASPUTIN.jpg</option>
+        <option value="img/investigadores/SAM.jpg">SAM.jpg</option>
+        <option value="img\CRIADOR IMG\HAB3.png">habil.jpg</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="imagens">
+    <img id="img1" src="img/investigadores/AHMED.jpg" alt="Imagem 1">
+    <img id="img2" src="img/investigadores/ALEX.jpg" alt="Imagem 2">
+    <img id="img3" src="img/investigadores/ARIELE.jpg" alt="Imagem 3">
+    <img id="img4" src="img/investigadores/Borden.jpg" alt="Imagem 4">
+  </div>
+
+ 
+  <script>
+
+    function trocarImagem(select, idImg) {
+      var img = document.getElementById(idImg);
+      img.src = select.value;
+    }
+
+
+    function randomizarImagens() {
+      var selects = document.querySelectorAll('select');
+      selects.forEach(function(select) {
+        var options = select.options;
+        var randomIndex = Math.floor(Math.random() * options.length);
+        select.selectedIndex = randomIndex;
+        trocarImagem(select, select.id.replace('imagem', 'img'));
+      });
+    }
+  </script>
+
+</body>
+</html>
