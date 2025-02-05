@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Arrastar imagem</title>
+<style>
+#imagem {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: grab;
+}
+#container {
+  display: grid;
+  grid-template-columns: repeat(50, 40px);
+  grid-template-rows: repeat(20, 40px);
+  width: 2000px; 
+  height: 800px; 
+  border: 1px solid black;
+}
+.campo {
+  width: 40px;
+  height: 40px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div id="logo">
+                <img src="" alt="Logo do Site">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aang/aang.html">Aang</a></li>
+                <li><a href="criador.html">criador</a></li>
+                <li><a href="anciões.html">Anciões</a></li>
+                <li><a href="playcard.html">Cartao de Jogo</a></li>
+                <li><a href="history.html">Investigadores</a></li>
+                <li><a href="tabuleiro.html">Tabuleiro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<img id="imagem" src="img/pino copiar.png" alt="Imagem">
+
+<div id="container">
+  </div>
+
+<script>
+const imagem = document.getElementById('imagem');
+const container = document.getElementById('container');
+let arrastando = false;
+let offsetX, offsetY;
+
+
+for (let i = 0; i < 4000; i++) {
+  const campo = document.createElement('div');
+  campo.classList.add('campo');
+  container.appendChild(campo);
+}
+
+imagem.addEventListener('mousedown', (e) => {
+  arrastando = true;
+  offsetX = e.clientX - imagem.offsetLeft;
+  offsetY = e.clientY - imagem.offsetTop;
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (arrastando) {
+    imagem.style.left = (e.clientX - offsetX) + 'px';
+    imagem.style.top = (e.clientY - offsetY) + 'px';
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  arrastando = false;
+  const campos = document.querySelectorAll('.campo');
+  let distanciaMinima = Infinity;
+  let campoMaisProximo = null;
+  campos.forEach(campo => {
+    const centroX = campo.offsetLeft + 5;
+    const centroY = campo.offsetTop + 5;
+    const distancia = Math.sqrt((centroX - imagem.offsetLeft) ** 2 + (centroY - imagem.offsetTop) ** 2);
+    if (distancia < distanciaMinima) {
+      distanciaMinima = distancia;
+      campoMaisProximo = campo;
+    }
+  });
+  if (campoMaisProximo) {
+    imagem.style.left = campoMaisProximo.offsetLeft + 'px';
+    imagem.style.top = campoMaisProximo.offsetTop + 'px';
+  }
+});
+</script>
+
+</body>
+</html>
