@@ -1,0 +1,181 @@
+/* banners */
+
+banner {
+    color: rgb(12, 0, 0);          /* Cor do texto branca */
+    -webkit-text-stroke: 1px rgb(255, 72, 0); /* Contorno amarelo de 1px */
+    font-size: 20px;
+    text-shadow: 
+    -1px -1px 0 #000, 
+     1px  1px 0 #fff; 
+     transform: skewX(15deg); /* Inclina o banner no eixo X */
+
+}
+
+#anciaobanner {
+
+    background-image: url(img/chthulhu19.png);
+    background-size: 150px;
+    background-repeat: no-repeat;
+
+}
+
+#jogarbanner {
+
+    background-image: url(img/Camada\ 28.png);
+    background-size: 150px;
+    background-position: -20px 30px; 
+    background-repeat: no-repeat;
+    background-color: rgba(22, 70, 85, 0.8); 
+
+}
+
+#investigadoresbanner {
+
+    background-image: url(img/Camada\ 29.png);
+    background-size: 125px;
+    background-position: 15px 30px; 
+    background-repeat: no-repeat;
+    background-color: rgba(22, 70, 85, 0.8); 
+
+
+}
+
+
+
+nav a {
+    color: rgb(236, 230, 230);
+    text-decoration: none;
+}.campo-redondo {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(85, 22, 22, 0.8); 
+    border: 3px solid red; /* Borda vermelha */
+    margin: 20px;
+    text-align: center;
+    line-height: 150px; 
+    cursor: pointer; 
+}
+
+/* banners */
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url("./img/httpssteamusercontentaakamaihdnetugc1012692322314105313955A2B415101ACB6FEA3D1CAB25A639B82B25495.jpg"); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    width: 100%; 
+    z-index: 100; 
+}
+
+main {
+    position: relative;
+    margin-top: 3em; 
+    margin-bottom: 2em;
+  }
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1em;
+}
+
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para o contêiner do select e botões */
+#personagem-select-ancioes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para o select */
+#select-ancião-ancioes {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+/* Estilos para os botões */
+#botao-voltar-ancioes, #botao-avancar-ancioes {
+    padding: 5px 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Estilos para o contêiner da imagem e história */
+#personagem-info-ancioes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilos para a imagem */
+#ancião-imagem {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos para a história */
+#ancião-historia {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    max-width: 500px;
+}
+
+#historia-imagem {
+    max-width: 100%; 
+    max-height: 100%;
+    object-fit: cover; 
+  }.selecao {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    z-index: 10; 
+  }
+
+  #aangtxt {
+
+    font-size: x-large;
+    color: #fcfcf9;
+  
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black; 
+    opacity: 0.8; 
+    margin-left: 50px;  
+    margin-right: 20px;
+
+  }
+
+  #aang {
+    background-image: url("img/toph.jpg"); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Ajuste a imagem para cobrir toda a página */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+  }

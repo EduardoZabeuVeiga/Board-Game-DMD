@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>playcard</title>
+<style>
+
+* {
+  user-select: none;
+}
+
+#img2 {
+  position: relative;
+  width: 1000px;
+  z-index: -1;
+
+
+}
+
+#containerB{
+
+  position: absolute; 
+  top: 170px;
+  
+}
+
+#containerC {
+  position: absolute; 
+  top: 328px; 
+}
+
+#containerD {
+  position: absolute; 
+  top: 486px; 
+}
+
+#containerF {
+  position: absolute; 
+  top: 417px; 
+}
+
+#containerG {
+  position: absolute; 
+  top: 476px; 
+}
+
+#menos {
+  left: 0;
+}
+
+#mais {
+  left: 100px;
+}
+
+#containerA, #containerB, #containerC, #containerD, #containerF, #containerG {
+  position: absolute;
+}
+
+.pino{
+  width: 70px;
+  position: absolute;
+  transition: left 0.3s ease;
+}
+
+.setamenos{
+
+  width: 80px;
+  position: absolute;
+  transition: left 0.3s ease;
+  margin-top: 30px;
+}
+</style>
+</head>
+<body>
+  <div class="container" id="containerA">
+    <img src="img/arrow right.png" alt="Botão Menos" id="menosA" class="setamenos">
+    <img src="img/pino copiar.png" alt="Pino" id="letraA" class="pino"> 
+  </div>
+
+  </div>
+
+  <div class="container" id="containerB">
+    <img src="img/arrow right.png" alt="Botão Menos" id="menosB" class="setamenos">
+    <img src="img/pino copiar.png" alt="Pino" id="letraB" class="pino">
+     </div>
+
+     <div class="container" id="containerC">
+     <img src="img/arrow right.png" alt="Botão Menos" id="menosC" class="setamenos">
+     <img src="img/pino copiar.png" alt="Pino" id="letraC" class="pino">
+   </div>
+ 
+   <div class="container" id="containerD">
+     <img src="img/arrow right.png" alt="Botão Menos" id="menosD" class="setamenos">
+     <img src="img/pino copiar.png" alt="Pino" id="letraD" class="pino">
+   </div>
+ 
+   <div class="container" id="containerF">
+     <img src="img/arrow right.png" alt="Botão Menos" id="menosF" class="setamenos">
+     <img src="img/pino copiar.png" alt="Pino" id="letraF" class="pino">
+   </div>
+ 
+   <div class="container" id="containerG">
+     <img src="img/arrow right.png" alt="Botão Menos" id="menosG" class="setamenos">
+     <img src="img/pino copiar.png" alt="Pino" id="letraG" class="pino">
+   </div>
+   <div class="menu">
+    <label for="imagem2">Caracteristica:</label>
+    <select id="imagem2" onchange="trocarImagem(this, 'img2')">
+      <option value="img/investigadores/ed2009.jpg">ed2009.jpg</option>
+      <option value="img/investigadores/A Garota.jpg">A Garota.jpg</option>
+      <option value="img/investigadores/ADAM.jpg">ADAM.jpg</option>
+      <option value="img/investigadores/ADILAH.jpg">ADILAH.jpg</option>
+      <option value="img/investigadores/AHMED.jpg">AHMED.jpg</option>
+      <option value="img/investigadores/ALEX.jpg">ALEX.jpg</option>
+      <option value="img/investigadores/ARIELE.jpg">ARIELE.jpg</option>
+      <option value="img/investigadores/Borden.jpg">Borden.jpg</option>
+      <option value="img/investigadores/Elizabeth.jpg">Elizabeth.jpg</option>
+      <option value="img/investigadores/FATIMA.jpg">FATIMA.jpg</option>
+      <option value="img/investigadores/HAILIA.jpg">HAILIA.jpg</option>
+      <option value="img/investigadores/IAN.jpg">IAN.jpg</option>
+      <option value="img/investigadores/IRMABETH.jpg">IRMABETH.jpg</option>
+      <option value="img/investigadores/LUKE.jpg">LUKE.jpg</option>
+      <option value="img/investigadores/MARGARETHE.jpg">MARGARETHE.jpg</option>
+      <option value="img/investigadores/MARIO.jpg">MARIO.jpg</option>
+      <option value="img/investigadores/MARY.jpg">MARY.jpg</option>
+      <option value="img/investigadores/Morgan.jpg">Morgan.jpg</option>
+      <option value="img/investigadores/RASPUTIN.jpg">RASPUTIN.jpg</option>
+      <option value="img/investigadores/SAM.jpg">SAM.jpg</option>
+      <option value="img/investigadores/TONY.jpg">TONY.jpg</option>
+    </select>
+    <label for="slotSelect">Slot de Salvamento:</label>
+    <select id="slotSelect">
+      <option value="slot1">Slot 1</option>
+      <option value="slot2">Slot 2</option>
+      <option value="slot3">Slot 3</option>
+    </select>
+    <button onclick="salvarPosicoes()">Salvar Posições</button>
+    <button onclick="carregarPosicoes()">Carregar Posições</button>
+  </div>
+
+  <div class="imagens">
+    <img id="img2" src="img/investigadores/ed2009.jpg" alt="Imagem 2">
+  </div>
+
+  <script>
+const menosA = document.getElementById('menosA');
+const pinoA = document.getElementById('letraA');
+
+// Posições do pino, em pixels
+const posicoes = [
+  35, 90, 133, 176, 219, 262, 305, 348, 391, 434, 477, 520, 563, 606, 649, 692, 735, 778, 821, 864, 907
+];
+
+var posicaoAtualA = 0;
+
+var posicaoPinoA = posicoes[posicaoAtualA];
+
+
+var posicaoMenosA = posicaoPinoA - 50;
+
+pinoA.style.left = posicaoPinoA + 'px';
+menosA.style.left = posicaoMenosA + 'px';
+
+
+function exibirMensagem(mensagem) {
+  alert(mensagem);
+ 
+}
+
+
+function voltarA() {
+  posicaoAtualA = 0;
+  posicaoPinoA = posicoes[posicaoAtualA];
+  pinoA.style.left = posicaoPinoA + 'px';
+  posicaoMenosA = posicaoPinoA - 50;
+  menosA.style.left = posicaoMenosA + 'px';
+}
+
+
+menosA.addEventListener('click', () => {
+  posicaoAtualA--;
+  if (posicaoAtualA < 0) {
+    posicaoAtualA = 0;
+  }
+
+  
+  posicaoPinoA = posicoes[posicaoAtualA];
+  pinoA.style.left = posicaoPinoA + 'px';
+
+  posicaoMenosA = posicaoPinoA - 50;
+  menosA.style.left = posicaoMenosA + 'px';
+});
+
+
+pinoA.addEventListener('click', () => {
+  posicaoAtualA++;
+  if (posicaoAtualA >= posicoes.length) {
+    posicaoAtualA = posicoes.length - 1;
+  }
+
+
+  posicaoPinoA = posicoes[posicaoAtualA];
+  pinoA.style.left = posicaoPinoA + 'px';
+
+
+  posicaoMenosA = posicaoPinoA - 50;
+  menosA.style.left = posicaoMenosA + 'px';
+
+  setTimeout(() => {
+   
+    if (posicaoAtualA === 4) {
+      exibirMensagem("Limiar!!! Evolua sua habilidade e ative os efeitos!");
+    } else if (posicaoAtualA === 8) {
+      exibirMensagem("Limiar!!! Evolua sua habilidade e ative os efeitos! ADICIONE UM DADO VERDE!!");
+    } else if (posicaoAtualA === 12) {
+      exibirMensagem("Limiar!!! Evolua sua habilidade e ative os efeitos!!");
+    } else if (posicaoAtualA === 15) {
+      exibirMensagem("Limiar!!! Evolua sua habilidade e ative os efeitos! ADICIONE OUTRO 1 DADOS VERDE (totalizando 2 dados pela insanidade)");
+    } else if (posicaoAtualA === 18) {
+      exibirMensagem("Limiar!!! Evolua sua habilidade e ative os efeitos!! ADICIONE OUTRO 1 DADOS VERDE (totalizando 3 dados pela insanidade)");
+    } else if (posicaoAtualA === 19) {
+      exibirMensagem("Voce esta a um passo da insanidade total!!  ADICIONE OUTRO 1 DADOS VERDE (totalizando 4 dados pela insanidade)");
+    }
+  }, 300);
+
+  
+  if (posicaoAtualA === posicoes.length - 1) {
+    setTimeout(() => {
+      if (confirm("Tem certeza que deseja entrar na loucura?")) {
+        window.location.href = "loucura.html";
+      } else {
+        voltarA();
+      }
+    }, 1000);
+  }
+});
+
+
+
+function voltarA() {
+  posicaoAtualA = 19; 
+  posicaoPinoA = posicoes[posicaoAtualA];
+  pinoA.style.left = posicaoPinoA + 'px';
+  posicaoMenosA = posicaoPinoA - 50;
+  menosA.style.left = posicaoMenosA + 'px';
+}
+
+
+
+function exibirMensagem(mensagem) {
+
+  const mensagemDiv = document.createElement("div");
+
+  
+  mensagemDiv.innerHTML = `
+    <p>${mensagem}</p> 
+      <button 
+      
+      style="
+         padding: 8px 16px;
+        border: none;
+        border-radius: 3px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        width: 80px;
+        display: block; 
+        margin: 20px auto; 
+        position: relative;
+        bottom: 20px;
+    
+        ">OK
+    
+    /button>
+  `;
+  mensagemDiv.style.cssText = `
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+  `;
+
+ 
+  document.body.appendChild(mensagemDiv);
+
+  
+  const botaoOk = mensagemDiv.querySelector("button"); 
+  botaoOk.addEventListener("click", () => {
+    document.body.removeChild(mensagemDiv);
+  });
+}
+const menosB = document.getElementById('menosB');
+const pinoB = document.getElementById('letraB');
+
+const posicoesB = [ 540, 655, 770, 885];
+
+var posicaoAtualB = 0;
+var posicaoPinoB = posicoesB[posicaoAtualB];
+
+
+pinoB.style.left = posicaoPinoB + 'px';
+menosB.style.left = (posicaoPinoB - 50) + 'px';
+
+menosB.addEventListener('click', () => {
+  posicaoAtualB--;
+  if (posicaoAtualB < 0) {
+    posicaoAtualB = 0;
+  }
+  atualizarPosicaoB();
+});
+
+pinoB.addEventListener('click', () => {
+  posicaoAtualB++;
+  if (posicaoAtualB >= posicoesB.length) {
+    posicaoAtualB = posicoesB.length - 1;
+  }
+  atualizarPosicaoB();
+});
+
+function atualizarPosicaoB() {
+  posicaoPinoB = posicoesB[posicaoAtualB];
+  pinoB.style.left = posicaoPinoB + 'px';
+  menosB.style.left = (posicaoPinoB - 50) + 'px';
+}
+
+const menosC = document.getElementById('menosC');
+const pinoC = document.getElementById('letraC');
+
+const posicoesC = [540, 655, 770, 885];
+
+var posicaoAtualC = 0;
+var posicaoPinoC = posicoesC[posicaoAtualC];
+
+pinoC.style.left = posicaoPinoC + 'px';
+menosC.style.left = (posicaoPinoC - 50) + 'px';
+
+menosC.addEventListener('click', () => {
+  posicaoAtualC--;
+  if (posicaoAtualC < 0) {
+    posicaoAtualC = 0;
+  }
+  atualizarPosicaoC();
+});
+
+pinoC.addEventListener('click', () => {
+  posicaoAtualC++;
+  if (posicaoAtualC >= posicoesC.length) {
+    posicaoAtualC = posicoesC.length - 1;
+  }
+  atualizarPosicaoC();
+});
+
+function atualizarPosicaoC() {
+  posicaoPinoC = posicoesC[posicaoAtualC];
+  pinoC.style.left = posicaoPinoC + 'px';
+  menosC.style.left = (posicaoPinoC - 50) + 'px';
+}
+
+const menosD = document.getElementById('menosD');
+const pinoD = document.getElementById('letraD');
+
+const posicoesD = [540, 655, 770, 885];
+
+var posicaoAtualD = 0;
+var posicaoPinoD = posicoesD[posicaoAtualD];
+
+pinoD.style.left = posicaoPinoD + 'px';
+menosD.style.left = (posicaoPinoD - 50) + 'px';
+
+menosD.addEventListener('click', () => {
+  posicaoAtualD--;
+  if (posicaoAtualD < 0) {
+    posicaoAtualD = 0;
+  }
+  atualizarPosicaoD();
+});
+
+pinoD.addEventListener('click', () => {
+  posicaoAtualD++;
+  if (posicaoAtualD >= posicoesD.length) {
+    posicaoAtualD = posicoesD.length - 1;
+  }
+  atualizarPosicaoD();
+});
+
+function atualizarPosicaoD() {
+  posicaoPinoD = posicoesD[posicaoAtualD];
+  pinoD.style.left = posicaoPinoD + 'px';
+  menosD.style.left = (posicaoPinoD - 50) + 'px';
+}
+const menosF = document.getElementById('menosF');
+const pinoF = document.getElementById('letraF');
+
+const posicoesF = [65, 124, 183, 242, 301];
+
+var posicaoAtualF = 0;
+var posicaoPinoF = posicoesF[posicaoAtualF];
+
+pinoF.style.left = posicaoPinoF + 'px';
+menosF.style.left = (posicaoPinoF - 50) + 'px';
+
+menosF.addEventListener('click', () => {
+  posicaoAtualF--;
+  if (posicaoAtualF < 0) {
+    posicaoAtualF = 0;
+  }
+  atualizarPosicaoF();
+});
+
+pinoF.addEventListener('click', () => {
+  posicaoAtualF++;
+  if (posicaoAtualF >= posicoesF.length) {
+    posicaoAtualF = posicoesF.length - 1;
+  }
+  atualizarPosicaoF();
+});
+
+function atualizarPosicaoF() {
+  posicaoPinoF = posicoesF[posicaoAtualF];
+  pinoF.style.left = posicaoPinoF + 'px';
+  menosF.style.left = (posicaoPinoF - 50) + 'px';
+}
+
+// G
+const menosG = document.getElementById('menosG');
+const pinoG = document.getElementById('letraG');
+
+const posicoesG = [65, 124, 183, 242, 301, 360];
+
+var posicaoAtualG = 0;
+var posicaoPinoG = posicoesG[posicaoAtualG];
+
+pinoG.style.left = posicaoPinoG + 'px';
+menosG.style.left = (posicaoPinoG - 50) + 'px';
+
+menosG.addEventListener('click', () => {
+  posicaoAtualG--;
+  if (posicaoAtualG < 0) {
+    posicaoAtualG = 0;
+  }
+  atualizarPosicaoG();
+});
+
+pinoG.addEventListener('click', () => {
+  posicaoAtualG++;
+  if (posicaoAtualG >= posicoesG.length) {
+    posicaoAtualG = posicoesG.length - 1;
+  }
+  atualizarPosicaoG();
+});
+
+function atualizarPosicaoG() {
+  posicaoPinoG = posicoesG[posicaoAtualG];
+  pinoG.style.left = posicaoPinoG + 'px';
+  menosG.style.left = (posicaoPinoG - 50) + 'px';
+}
+function trocarImagem(selectElement, imgId) {
+  const selectedValue = selectElement.value;
+  const imgElement = document.getElementById(imgId);
+  imgElement.src = selectedValue;
+}
+function salvarPosicoes() {
+  const slot = document.getElementById('slotSelect').value;
+  const posicoes = {
+    posicaoAtualA,
+    posicaoAtualB,
+    posicaoAtualC,
+    posicaoAtualD,
+    posicaoAtualF,
+    posicaoAtualG
+  };
+  localStorage.setItem(`posicoes_${slot}`, JSON.stringify(posicoes));
+  alert('Posições salvas no ' + slot);
+}
+
+function carregarPosicoes() {
+  const slot = document.getElementById('slotSelect').value;
+  const posicoes = JSON.parse(localStorage.getItem(`posicoes_${slot}`));
+  if (posicoes) {
+    posicaoAtualA = posicoes.posicaoAtualA;
+    posicaoAtualB = posicoes.posicaoAtualB;
+    posicaoAtualC = posicoes.posicaoAtualC;
+    posicaoAtualD = posicoes.posicaoAtualD;
+    posicaoAtualF = posicoes.posicaoAtualF;
+    posicaoAtualG = posicoes.posicaoAtualG;
+
+    atualizarPosicaoA();
+    atualizarPosicaoB();
+    atualizarPosicaoC();
+    atualizarPosicaoD();
+    atualizarPosicaoF();
+    atualizarPosicaoG();
+
+    alert('Posições carregadas do ' + slot);
+  } else {
+    alert('Nenhuma posição salva no ' + slot);
+  }
+}
+
+function atualizarPosicaoA() {
+  posicaoPinoA = posicoes[posicaoAtualA];
+  pinoA.style.left = posicaoPinoA + 'px';
+  menosA.style.left = (posicaoPinoA - 50) + 'px';
+}
+
+// Adicione chamadas para atualizar as posições dos outros pinos
+function atualizarPosicaoB() {
+  posicaoPinoB = posicoesB[posicaoAtualB];
+  pinoB.style.left = posicaoPinoB + 'px';
+  menosB.style.left = (posicaoPinoB - 50) + 'px';
+}
+
+function atualizarPosicaoC() {
+  posicaoPinoC = posicoesC[posicaoAtualC];
+  pinoC.style.left = posicaoPinoC + 'px';
+  menosC.style.left = (posicaoPinoC - 50) + 'px';
+}
+
+function atualizarPosicaoD() {
+  posicaoPinoD = posicoesD[posicaoAtualD];
+  pinoD.style.left = posicaoPinoD + 'px';
+  menosD.style.left = (posicaoPinoD - 50) + 'px';
+}
+
+function atualizarPosicaoF() {
+  posicaoPinoF = posicoesF[posicaoAtualF];
+  pinoF.style.left = posicaoPinoF + 'px';
+  menosF.style.left = (posicaoPinoF - 50) + 'px';
+}
+
+function atualizarPosicaoG() {
+  posicaoPinoG = posicoesG[posicaoAtualG];
+  pinoG.style.left = posicaoPinoG + 'px';
+  menosG.style.left = (posicaoPinoG - 50) + 'px';
+}
+
+  </script>
+</body>
+</html>
