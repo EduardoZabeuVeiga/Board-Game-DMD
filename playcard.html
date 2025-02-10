@@ -137,8 +137,12 @@
      <img src="img/arrow right.png" alt="Botão Menos" id="menosG" class="setamenos">
      <img src="img/pino copiar.png" alt="Pino" id="letraG" class="pino">
    </div>
+  
+  
+  
    <div class="menu-container">
     <div class="menu">
+      <button onclick="window.location.href='index.html'">Voltar ao Início</button>
       <label for="imagem2">Investigador:</label>
       <select id="imagem2" onchange="trocarImagem(this, 'img2')">
         <option value="img/investigadores/ed2009.jpg">ed2009.jpg</option>
@@ -500,16 +504,30 @@ function trocarImagem(selectElement, imgId) {
   const imgElement = document.getElementById(imgId);
   imgElement.src = selectedValue;
 }
+
+
+
+
+
+
+
+
 function salvarPosicoes() {
   const slot = document.getElementById('slotSelect').value;
+
+  // Get the selected investigator image source
+  const img2Src = document.getElementById('img2').src;
+
   const posicoes = {
     posicaoAtualA,
     posicaoAtualB,
     posicaoAtualC,
     posicaoAtualD,
     posicaoAtualF,
-    posicaoAtualG
+    posicaoAtualG,
+    img2Src // Add the image source to the saved data
   };
+
   localStorage.setItem(`posicoes_${slot}`, JSON.stringify(posicoes));
   alert('Posições salvas no ' + slot);
 }
@@ -524,6 +542,9 @@ function carregarPosicoes() {
     posicaoAtualD = posicoes.posicaoAtualD;
     posicaoAtualF = posicoes.posicaoAtualF;
     posicaoAtualG = posicoes.posicaoAtualG;
+
+    // Set the investigator image source
+    document.getElementById('img2').src = posicoes.img2Src;
 
     atualizarPosicaoA();
     atualizarPosicaoB();
@@ -544,7 +565,7 @@ function atualizarPosicaoA() {
   menosA.style.left = (posicaoPinoA - 50) + 'px';
 }
 
-// Adicione chamadas para atualizar as posições dos outros pinos
+
 function atualizarPosicaoB() {
   posicaoPinoB = posicoesB[posicaoAtualB];
   pinoB.style.left = posicaoPinoB + 'px';
@@ -574,6 +595,13 @@ function atualizarPosicaoG() {
   pinoG.style.left = posicaoPinoG + 'px';
   menosG.style.left = (posicaoPinoG - 50) + 'px';
 }
+
+
+
+
+
+
+
 
 
 function escolherAleatorio() {
