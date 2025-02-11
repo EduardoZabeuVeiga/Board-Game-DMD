@@ -7,11 +7,15 @@
 * {
   user-select: none;
 }
+
+#body {
+  background-image: url("img/unnamed (8).png");
+}
 .menu-container {
     position: absolute;
   top: 0; 
   left: 0; 
-  width: 100%; 
+  width: 1000px; 
   display: none;
   justify-content: space-around; 
   align-items: center; 
@@ -22,10 +26,10 @@
 
 .menu-toggle {
   position: absolute;
-  top: 10px;
-  left: 70px;
-  width: 60px;
-  height: 30px;
+  top: -11px;
+  left: 910px;
+  width: 50px;
+  height: 75px;
   cursor: pointer;
   z-index: 3; 
 }
@@ -142,30 +146,30 @@
   
    <div class="menu-container">
     <div class="menu">
-      <button onclick="window.location.href='index.html'">Voltar ao Início</button>
-      <label for="imagem2">Investigador:</label>
+      <button onclick="window.location.href='index.html'">Home</button>
+      <label for="imagem2"></label>
       <select id="imagem2" onchange="trocarImagem(this, 'img2')">
-        <option value="img/investigadores/ed2009.jpg">ed2009.jpg</option>
-        <option value="img/investigadores/A Garota.jpg">A Garota.jpg</option>
-        <option value="img/investigadores/ADAM.jpg">ADAM.jpg</option>
-        <option value="img/investigadores/ADILAH.jpg">ADILAH.jpg</option>
-        <option value="img/investigadores/AHMED.jpg">AHMED.jpg</option>
-        <option value="img/investigadores/ALEX.jpg">ALEX.jpg</option>
-        <option value="img/investigadores/ARIELE.jpg">ARIELE.jpg</option>
-        <option value="img/investigadores/Borden.jpg">Borden.jpg</option>
-        <option value="img/investigadores/Elizabeth.jpg">Elizabeth.jpg</option>
-        <option value="img/investigadores/FATIMA.jpg">FATIMA.jpg</option>
-        <option value="img/investigadores/HAILIA.jpg">HAILIA.jpg</option>
-        <option value="img/investigadores/IAN.jpg">IAN.jpg</option>
-        <option value="img/investigadores/IRMABETH.jpg">IRMABETH.jpg</option>
-        <option value="img/investigadores/LUKE.jpg">LUKE.jpg</option>
-        <option value="img/investigadores/MARGARETHE.jpg">MARGARETHE.jpg</option>
-        <option value="img/investigadores/MARIO.jpg">MARIO.jpg</option>
-        <option value="img/investigadores/MARY.jpg">MARY.jpg</option>
-        <option value="img/investigadores/Morgan.jpg">Morgan.jpg</option>
-        <option value="img/investigadores/RASPUTIN.jpg">RASPUTIN.jpg</option>
-        <option value="img/investigadores/SAM.jpg">SAM.jpg</option>
-        <option value="img/investigadores/TONY.jpg">TONY.jpg</option>
+        <option value="img/investigadores/ed2009.jpg">Ed-2009</option>
+        <option value="img/investigadores/A Garota.jpg">A Garota</option>
+        <option value="img/investigadores/ADAM.jpg">Adam</option>
+        <option value="img/investigadores/ADILAH.jpg">Adilah</option>
+        <option value="img/investigadores/AHMED.jpg">Ahmed</option>
+        <option value="img/investigadores/ALEX.jpg">Alex</option>
+        <option value="img/investigadores/ARIELE.jpg">Ariele</option>
+        <option value="img/investigadores/Borden.jpg">Borden</option>
+        <option value="img/investigadores/Elizabeth.jpg">Elizabeth</option>
+        <option value="img/investigadores/FATIMA.jpg">Fatima</option>
+        <option value="img/investigadores/HAILIA.jpg">Hailia</option>
+        <option value="img/investigadores/IAN.jpg">Ian</option>
+        <option value="img/investigadores/IRMABETH.jpg">Irmâ Beth</option>
+        <option value="img/investigadores/LUKE.jpg">Luke</option>
+        <option value="img/investigadores/MARGARETHE.jpg">Margarethe</option>
+        <option value="img/investigadores/MARIO.jpg">Mario</option>
+        <option value="img/investigadores/MARY.jpg">Mary</option>
+        <option value="img/investigadores/Morgan.jpg">Morgan</option>
+        <option value="img/investigadores/RASPUTIN.jpg">Rasputin</option>
+        <option value="img/investigadores/SAM.jpg">Sam</option>
+        <option value="img/investigadores/TONY.jpg">Tony</option>
       </select>
       <img src="img/random.png" alt="Random" id="randomImg" style="width: 20px; height: 20px; cursor: pointer;" onclick="escolherAleatorio()">
       <label for="slotSelect"></label>
@@ -174,8 +178,8 @@
         <option value="slot2">Slot 2</option>
         <option value="slot3">Slot 3</option>
       </select>
-      <button onclick="salvarPosicoes()">Salvar Posições</button>
-      <button onclick="carregarPosicoes()">Carregar Posições</button>
+      <button onclick="salvarPosicoes()">Salvar</button>
+      <button onclick="carregarPosicoes()">Carregar</button>
     </div>
   </div>
   <div class="imagens" id="investigadores">
@@ -622,9 +626,9 @@ function toggleMenu() {
   }
   function escolherImagemAleatoria() {
     const imagens = [
-      'img/menu2.png',
-      'img/menu2.png',
-      'img/menu2.png'
+      'img/kaiseramarelo.png',
+      'img/kaiseramarelo.png',
+      'img/kaiseramarelo.png'
     ];
     const randomIndex = Math.floor(Math.random() * imagens.length);
     const menuToggle = document.querySelector('.menu-toggle');

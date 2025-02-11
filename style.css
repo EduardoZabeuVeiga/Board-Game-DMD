@@ -11,9 +11,25 @@ banner {
 
 }
 
+#logo {
+   width: 30px;
+   height: 30px;
+    margin-right: 0px;
+    margin-top: -5px; 
+
+}
+
+#logo img {
+    width: 100px;
+    height: 150px;
+    margin-right: 0px;
+    margin-top: -11px;
+
+  }
+
 #anciaobanner {
 
-    background-image: url(img/chthulhu19.png);
+    background-image: url(img/unnamed\ \(3\).png);
     background-size: 150px;
     background-repeat: no-repeat;
 
@@ -64,7 +80,7 @@ nav a {
 body {
     font-family: sans-serif;
     margin: 0;
-    background-image: url("./img/httpssteamusercontentaakamaihdnetugc1012692322314105313955A2B415101ACB6FEA3D1CAB25A639B82B25495.jpg"); /* Substitua pelo caminho da sua imagem */
+    background-image: url("img/unnamed\ \(8\).png"); 
     background-size: cover;
 }
 
